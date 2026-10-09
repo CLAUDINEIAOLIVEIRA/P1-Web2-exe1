@@ -1,15 +1,16 @@
 {
   "name": "desafio-node",
   "version": "1.0.0",
-  "description": "P1 - T303 - Programação e Design para Web II",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "Willian",
+  "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
-    "chalk": "^4.1.2"
+    "chalk": "^6.0.1"
   }
 }
