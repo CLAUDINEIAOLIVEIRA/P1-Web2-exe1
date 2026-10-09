@@ -119,11 +119,40 @@ if (nome) {
 
 > **Por que o `--` no `npm start`?** Ele avisa ao npm que o que vem depois (`Maria`) deve ser passado para o nosso programa, e não para o próprio npm.
 
+## Como rodar o projeto baixado do GitHub
+
+A pasta `node_modules` não vai para o GitHub, então depois de baixar o projeto é preciso instalar as dependências uma vez.
+
+**1. Baixe o repositório.** Pode ser pelo botão verde **Code > Download ZIP** no GitHub (depois extraia o .zip) ou pelo terminal:
+
+```
+git clone https://github.com/CLAUDINEIAOLIVEIRA/P1-Web2-exe1
+```
+
+**2. Entre na pasta do projeto.** Os arquivos do projeto ficam na pasta `desafio-node`, dentro do repositório.
+
+```
+cd P1-Web2-exe1\desafio-node
+```
+
+**3. Instale as dependências e rode.**
+
+```
+npm install
+npm start -- Maria
+```
+
+Deve aparecer, em verde: `Olá, Maria! Bem-vinda ao curso de React.`
+
 ## Problemas comuns
 
+- **Erro `O termo "Maria" não é reconhecido como nome de um cmdlet`**: o nome foi digitado sozinho no terminal. Ele precisa vir no mesmo comando, depois do arquivo: `node index.js Maria`.
+- **Erro `Cannot find module '...\maria'`**: foi digitado `node maria`. O Node tenta abrir um arquivo chamado `maria`. O certo é `node index.js Maria`.
+- **Erro `Não foi possível encontrar um parâmetro posicional que aceite o argumento` ao usar `cd`**: o nome da pasta tem espaço (por exemplo, `Exercicio 1`). Coloque o caminho entre aspas: `cd "Exercicio 1"`. Outra forma é digitar o começo do nome e apertar **Tab**, que o terminal completa e coloca as aspas sozinho.
+- **Erro `Não é possível localizar o caminho ... porque ele não existe` ao usar `cd`**: o terminal está em outra pasta. Veja o caminho que aparece antes do `>` no terminal. Para subir uma pasta, use `cd ..`.
 - **Erro `Cannot use import statement outside a module`**: faltou trocar o `"type"` para `"module"` no `package.json` (Passo 9).
 - **Erro dizendo que a execução de scripts foi desabilitada, ao rodar `npm`**: é o PowerShell bloqueando comandos. Troque o terminal para o **Prompt de Comando (cmd)**, pela setinha ao lado do `+` no terminal do VS Code.
-- **Aparece `Olá, undefined!`**: o nome não foi digitado depois de `node index.js`.
+- **Aparece `Olá, undefined!`** (na versão do Passo 6, antes da validação): o nome não foi digitado depois de `node index.js`. A validação do Passo 10 resolve isso, mostrando o aviso em vermelho.
 
 ## Entrega
 
